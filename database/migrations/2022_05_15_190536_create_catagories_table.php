@@ -17,6 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->timestamps();
+            $table->unsignedDBinteger(Catagory-id);
+            $table->forgien(Ctagory-id);
+            $table->referance('id');
+            $table->on('Catagory');
+            $table->onDelete('cascade');
+
         });
     }
 
